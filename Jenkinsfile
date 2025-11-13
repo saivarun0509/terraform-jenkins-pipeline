@@ -7,15 +7,15 @@ pipeline {
     }
 
     environment {
-        AWS_ACCESS_KEY_ID     = credentials('aws-access-key-id')
-        AWS_SECRET_ACCESS_KEY = credentials('aws-secret-access-key')
-        AWS_DEFAULT_REGION    = 'eu-north-1'
+        AWS_ACCESS_KEY_ID     = credentials('AKIA4UGMGW5ZHAPCSVWM')
+        AWS_SECRET_ACCESS_KEY = credentials('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')
+        AWS_DEFAULT_REGION    = 'ap-south-1'
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/pmohd6065-ux/terraform-jenkins-pipeline.git'
+                git branch: 'main', url: 'https://github.com/saivarun0509/terraform-jenkins-pipeline.git'
             }
         }
         stage('Terraform init') {
@@ -52,5 +52,6 @@ pipeline {
     }
 
 }
+
 
 
